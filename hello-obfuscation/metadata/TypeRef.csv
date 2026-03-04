@@ -1,0 +1,16 @@
+RID,ResolutionScope,Name,Namespace
+1,6,CompilationRelaxationsAttribute,System.Runtime.CompilerServices
+2,6,RuntimeCompatibilityAttribute,System.Runtime.CompilerServices
+3,6,DebuggableAttribute,System.Diagnostics
+4,15,DebuggingModes,
+5,6,TargetFrameworkAttribute,System.Runtime.Versioning
+6,6,AssemblyCompanyAttribute,System.Reflection
+7,6,AssemblyConfigurationAttribute,System.Reflection
+8,6,AssemblyFileVersionAttribute,System.Reflection
+9,6,AssemblyInformationalVersionAttribute,System.Reflection
+10,6,AssemblyProductAttribute,System.Reflection
+11,6,AssemblyTitleAttribute,System.Reflection
+12,6,RefSafetyRulesAttribute,System.Runtime.CompilerServices
+13,6,CompilerGeneratedAttribute,System.Runtime.CompilerServices
+14,6,Object,System
+15,10,Console,System
