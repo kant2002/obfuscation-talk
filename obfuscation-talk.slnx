@@ -3,5 +3,7 @@
     <File Path="README.md" />
   </Folder>
   <Project Path="hello-obfuscation/hello-obfuscation.csproj" />
+  <Project Path="hello-properties/hello-properties.csproj" />
   <Project Path="obfuscator-class-renaming/obfuscator-class-renaming.csproj" />
+  <Project Path="obfuscator-properties-removal/obfuscator-properties-removal.csproj" />
 </Solution>
