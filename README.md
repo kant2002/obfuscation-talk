@@ -12,4 +12,6 @@ cd ..\
 git clone https://github.com/kant2002/metadatadumper
 cd MetadataDumper
 dotnet run --project MetadataDumper\MetadataDumper.csproj ..\obfuscation-talk\hello-obfuscation\bin\Release\net11.0\hello-obfuscation.dll ..\obfuscation-talk\hello-obfuscation\metadata\
+cd ..\obfuscation-talk
+dotnet run --project obfuscator-class-renaming\obfuscator-class-renaming.csproj hello-obfuscation\bin\Release\net11.0\hello-obfuscation.dll hello-obfuscation\bin\Release\net11.0\hello-obfuscation.obfuscated.dll
 ```
