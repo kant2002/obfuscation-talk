@@ -6,4 +6,5 @@
   <Project Path="hello-properties/hello-properties.csproj" />
   <Project Path="obfuscator-class-renaming/obfuscator-class-renaming.csproj" />
   <Project Path="obfuscator-properties-removal/obfuscator-properties-removal.csproj" />
+  <Project Path="obfuscator-string-encoding/obfuscator-string-encoding.csproj" Id="f9f7609d-a05d-4713-8508-778f047d7550" />
 </Solution>
