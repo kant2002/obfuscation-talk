@@ -16,5 +16,6 @@ cd ..\obfuscation-talk
 dotnet run --project obfuscator-class-renaming\obfuscator-class-renaming.csproj hello-obfuscation\bin\Release\net11.0\hello-obfuscation.dll hello-obfuscation\bin\Release\net11.0\hello-obfuscation.obfuscated.dll
 dotnet run --project obfuscator-class-renaming\obfuscator-class-renaming.csproj hello-properties\bin\Release\net11.0\hello-properties.dll hello-properties\bin\Release\net11.0\hello-properties.obfuscated-classname.dll
 dotnet run --project obfuscator-properties-removal\obfuscator-properties-removal.csproj hello-properties\bin\Release\net11.0\hello-properties.dll hello-properties\bin\Release\net11.0\hello-properties.obfuscated.dll
-dotnet run --project obfuscator-string-encoding\obfuscator-string-encoding.csproj hello-properties\bin\Release\net11.0\hello-properties.dll hello-properties\bin\Release\net11.0\hello-properties.obfuscated-encoding.dll
+dotnet run --project obfuscator-string-encoding\obfuscator-string-encoding.csproj hello-obfuscation\bin\Release\net11.0\hello-obfuscation.dll hello-obfuscation\bin\Release\net11.0\hello-obfuscation.obfuscated-encoding.dll
+dotnet run --project obfuscator-string-encryption\obfuscator-string-encryption.csproj hello-obfuscation\bin\Release\net11.0\hello-obfuscation.dll hello-obfuscation\bin\Release\net11.0\hello-obfuscation.obfuscated-encryption.dll
 ```
