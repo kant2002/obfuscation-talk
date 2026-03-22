@@ -2,9 +2,11 @@
   <Folder Name="/Solution Items/">
     <File Path="README.md" />
   </Folder>
+  <Project Path="hello-conditions/hello-conditions.csproj" Id="c9429300-0649-4be3-863b-0290db296f1b" />
   <Project Path="hello-obfuscation/hello-obfuscation.csproj" />
   <Project Path="hello-properties/hello-properties.csproj" />
   <Project Path="obfuscator-class-renaming/obfuscator-class-renaming.csproj" />
+  <Project Path="obfuscator-conditions-simple/obfuscator-conditions-simple.csproj" Id="5630faf3-987d-45a5-900e-038bc72d9c9c" />
   <Project Path="obfuscator-properties-removal/obfuscator-properties-removal.csproj" />
   <Project Path="obfuscator-string-encoding/obfuscator-string-encoding.csproj" Id="f9f7609d-a05d-4713-8508-778f047d7550" />
   <Project Path="obfuscator-string-encryption/obfuscator-string-encryption.csproj" Id="2e24803f-7158-40df-a391-a67d2400037b" />
