@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/Solution Items/">
     <File Path="Directory.Build.props" />
+    <File Path="LICENSE.txt" />
     <File Path="README.md" />
   </Folder>
   <Project Path="hello-conditions/hello-conditions.csproj" Id="c9429300-0649-4be3-863b-0290db296f1b" />
