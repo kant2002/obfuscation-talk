@@ -11,7 +11,7 @@ Material born out of desire of one [Almaty Hackerspace](https://blackice.kz/) re
 - .NET 11.0 SDK (Yes, I prefer bleeding edge, but you can use .NET 10.0 as well, just change the target framework in Directory.Build.props)
 
 ```
-dotnet tool install --global dotnet-ildasm
+dotnet tool install --global MetadataDumper
 ```
 
 or alternatively build from source
@@ -34,6 +34,7 @@ dotnet build -c Release
 Run metadata export
 
 ```shell
+curl -O https://download.wikdict.com/dictionaries/sqlite/2_2024-03/en.sqlite3
 dotnet tool exec MetadataDumper -- artifacts\bin\hello-obfuscation\release\hello-obfuscation.dll hello-obfuscation\metadata\
 ```
 
@@ -43,6 +44,7 @@ cd ..\
 # This is application for dumping metadata into CSV files. 
 git clone https://github.com/kant2002/metadatadumper
 cd MetadataDumper
+curl -O https://download.wikdict.com/dictionaries/sqlite/2_2024-03/en.sqlite3
 dotnet run --project MetadataDumper\MetadataDumper.csproj ..\obfuscation-talk\artifacts\bin\release\hello-obfuscation.dll ..\obfuscation-talk\hello-obfuscation\metadata\
 cd ..\obfuscation-talk
 ```
