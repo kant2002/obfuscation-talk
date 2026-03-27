@@ -19,4 +19,5 @@ dotnet run --project obfuscator-properties-removal\obfuscator-properties-removal
 dotnet run --project obfuscator-string-encoding\obfuscator-string-encoding.csproj hello-obfuscation\bin\Release\net11.0\hello-obfuscation.dll hello-obfuscation\bin\Release\net11.0\hello-obfuscation.obfuscated-encoding.dll
 dotnet run --project obfuscator-string-encryption\obfuscator-string-encryption.csproj hello-obfuscation\bin\Release\net11.0\hello-obfuscation.dll hello-obfuscation\bin\Release\net11.0\hello-obfuscation.obfuscated-encryption.dll
 dotnet run --project obfuscator-conditions-simple\obfuscator-conditions-simple.csproj hello-conditions\bin\Release\net11.0\hello-conditions.dll hello-conditions\bin\Release\net11.0\hello-conditions.obfuscated.dll
+dotnet run --project obfuscator-dead-code\obfuscator-dead-code.csproj hello-conditions\bin\Release\net11.0\hello-conditions.dll hello-conditions\bin\Release\net11.0\hello-conditions.obfuscated-dead.dll
 ```

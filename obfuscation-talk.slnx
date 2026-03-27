@@ -7,6 +7,7 @@
   <Project Path="hello-properties/hello-properties.csproj" />
   <Project Path="obfuscator-class-renaming/obfuscator-class-renaming.csproj" />
   <Project Path="obfuscator-conditions-simple/obfuscator-conditions-simple.csproj" Id="5630faf3-987d-45a5-900e-038bc72d9c9c" />
+  <Project Path="obfuscator-dead-code/obfuscator-dead-code.csproj" Id="63f4ddd4-0f01-48d4-a876-2fd7b2932f55" />
   <Project Path="obfuscator-properties-removal/obfuscator-properties-removal.csproj" />
   <Project Path="obfuscator-string-encoding/obfuscator-string-encoding.csproj" Id="f9f7609d-a05d-4713-8508-778f047d7550" />
   <Project Path="obfuscator-string-encryption/obfuscator-string-encryption.csproj" Id="2e24803f-7158-40df-a391-a67d2400037b" />
