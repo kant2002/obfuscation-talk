@@ -60,3 +60,43 @@ dotnet run --project obfuscator-string-encryption\obfuscator-string-encryption.c
 dotnet run --project obfuscator-conditions-simple\obfuscator-conditions-simple.csproj artifacts\bin\hello-conditions\release\hello-conditions.dll artifacts\bin\hello-conditions\release\hello-conditions.obfuscated.dll
 dotnet run --project obfuscator-dead-code\obfuscator-dead-code.csproj artifacts\bin\hello-conditions\release\hello-conditions.dll artifacts\bin\hello-conditions\release\hello-conditions.obfuscated-dead.dll
 ```
+
+## .NET Cheat Sheet
+
+If you see .NET for a first time, here is a cheat sheet for you:
+
+Create HelloWorld console application in the HelloWorld sub-directory
+
+```
+dotnet new console -n HelloWorld
+```
+
+Build the application
+
+```
+dotnet build
+```
+
+Build release application (slightly different IL codegen)
+
+```
+dotnet build -c Release
+```
+
+Run application
+
+```
+dotnet run
+```
+
+Run application with parameters 
+
+```
+dotnet run -- parameters goes here
+```
+
+Add dnlib package
+
+```
+dotnet add package dnlib
+```
