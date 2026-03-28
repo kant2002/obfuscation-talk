@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/obfuscators/">
     <Project Path="obfuscator-class-renaming/obfuscator-class-renaming.csproj" />
+    <Project Path="obfuscator-conditions-complex/obfuscator-conditions-complex.csproj" Id="bf223f5d-64af-4690-81ce-aa6ad0a69e80" />
     <Project Path="obfuscator-conditions-simple/obfuscator-conditions-simple.csproj" Id="5630faf3-987d-45a5-900e-038bc72d9c9c" />
     <Project Path="obfuscator-dead-code/obfuscator-dead-code.csproj" Id="63f4ddd4-0f01-48d4-a876-2fd7b2932f55" />
     <Project Path="obfuscator-properties-removal/obfuscator-properties-removal.csproj" />
