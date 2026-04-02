@@ -17,7 +17,10 @@ foreach (var type in module.Types)
     if (type.Name == "<Module>")
         continue;
     type.Name = "Class" + typeCode.ToString(CultureInfo.InvariantCulture);
+    // Remove properties metadata
     type.Properties.Clear();
+    // Remove events metadata
+    type.Events.Clear();
     typeCode++;
 }
 
