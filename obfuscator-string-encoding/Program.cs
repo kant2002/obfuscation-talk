@@ -16,11 +16,15 @@ foreach (var type in module.Types)
 {
     foreach (var method in type.Methods)
     {
+        // PInvoke methods does not have body. 
+        // Abstract methods too does not have body.
+        // So we skip these cases
         if (!method.HasBody)
             continue;
         for (int i = 0; i < method.Body.Instructions.Count; i++)
         {
             var instr = method.Body.Instructions[i];
+            // Detect ldstr
             if (instr.OpCode == OpCodes.Ldstr)
             {
                 var str = (string)instr.Operand;
