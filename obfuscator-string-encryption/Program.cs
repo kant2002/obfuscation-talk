@@ -16,7 +16,7 @@ ModuleDefMD targetModule = ModuleDefMD.Load(assemblyFile, modCtx);
 var decoderType = new TypeDefUser("Decoder", targetModule.CorLibTypes.Object.TypeDefOrRef);
 targetModule.Types.Add(decoderType);
 // Load template class
-var targetDecoder = GetRuntimeType(typeof(Decoder).FullName);
+var targetDecoder = GetRuntimeTemplateType(typeof(Decoder).FullName);
 // Inject template class content into target type in target assembly
 var context = new InjectContext(targetModule);
 var importer = new Importer(targetModule, ImporterOptions.TryToUseTypeDefs, new GenericParamContext(), context);
@@ -35,13 +35,16 @@ foreach (var type in targetModule.Types)
             if (instr.OpCode == OpCodes.Ldstr)
             {
                 var str = (string)instr.Operand;
+                // Encode using obfuscation runtime
                 var encodedStr = Decoder.EncodeString(str);
                 instr.Operand = encodedStr;
                 // Insert placing Decoder.DecodeString on the stack after the ldstr instruction
-                var fromBase64String = new Instruction(
+                var decodeStringSignature = 
+                    MethodSig.CreateStatic(targetModule.CorLibTypes.String, targetModule.CorLibTypes.String);
+                var decodeString = new Instruction(
                     OpCodes.Call,
-                    importer.Import(typeof(Decoder).GetMethod("DecodeString", [typeof(string)])));
-                method.Body.Instructions.Insert(i + 1, fromBase64String);
+                    importer.Import(decoderType.FindMethod("DecodeString", decodeStringSignature)));
+                method.Body.Instructions.Insert(i + 1, decodeString);
                 i = i + 1; // Skip the instruction we just added
             }
         }
@@ -52,7 +55,7 @@ targetModule.Write(targetFile);
 Console.WriteLine($"Rewritten metadata for the assembly {assemblyFile} saved to {targetFile}");
 
 // Get runtime type from existing assembly.
-TypeDef GetRuntimeType(string typeName)
+TypeDef GetRuntimeTemplateType(string typeName)
 {
     var runtimeModule = ModuleDefMD.Load(typeof(Program).Assembly.ManifestModule);
     return runtimeModule.Find(typeName, true);
