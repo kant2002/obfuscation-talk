@@ -16,8 +16,37 @@ foreach (var type in module.Types)
 {
     if (type.Name == "<Module>")
         continue;
+
+    // If the type is public or protected, skip it to avoid breaking external references
+    if (type.IsPublic || type.IsNestedFamily || type.IsNestedFamily || type.IsNestedAssembly)
+        continue;
+    
+    // Rename types
     type.Name = "Class" + typeCode.ToString(CultureInfo.InvariantCulture);
     typeCode++;
+
+    // Rename methods
+    int methodCode = 0;
+    foreach (var method in type.Methods)
+    {
+        if (method.Name == ".ctor")
+            continue;
+        if (method.IsPublic || method.IsFamily)
+            continue;
+        method.Name = "Method" + methodCode.ToString(CultureInfo.InvariantCulture);
+        Console.WriteLine($"Renamed method {method.Name} in type {type.Name}");
+        methodCode++;
+    }
+
+    // Rename fields
+    int fieldCode = 0;
+    foreach (var field in type.Fields)
+    {
+        if (field.IsPublic || field.IsFamily)
+            continue;
+        field.Name = "Field" + fieldCode.ToString(CultureInfo.InvariantCulture);
+        fieldCode++;
+    }
 }
 
 module.Write(targetFile);
