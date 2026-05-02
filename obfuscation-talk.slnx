@@ -1,4 +1,7 @@
 <Solution>
+  <Folder Name="/deobfuscators/">
+    <Project Path="deobfuscator-class-renaming/deobfuscator-class-renaming.csproj" Id="4c0689f1-c148-4ed0-aeb8-da060a4f2c59" />
+  </Folder>
   <Folder Name="/obfuscators/">
     <Project Path="obfuscator-class-renaming/obfuscator-class-renaming.csproj" />
     <Project Path="obfuscator-conditions-complex/obfuscator-conditions-complex.csproj" Id="bf223f5d-64af-4690-81ce-aa6ad0a69e80" />
@@ -10,6 +13,7 @@
   </Folder>
   <Folder Name="/samples/">
     <Project Path="hello-conditions/hello-conditions.csproj" Id="c9429300-0649-4be3-863b-0290db296f1b" />
+    <Project Path="hello-desktop/hello-desktop.csproj" Id="cd12cbed-ea98-4b80-94f9-846eae13fecd" />
     <Project Path="hello-obfuscation/hello-obfuscation.csproj" />
     <Project Path="hello-properties/hello-properties.csproj" />
   </Folder>

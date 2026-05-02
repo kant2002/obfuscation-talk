@@ -62,6 +62,13 @@ dotnet run --project obfuscator-dead-code\obfuscator-dead-code.csproj artifacts\
 dotnet run --project obfuscator-conditions-complex\obfuscator-conditions-complex.csproj artifacts\bin\hello-conditions\release\hello-conditions.dll artifacts\bin\hello-conditions\release\hello-conditions.obfuscated-complex.dll
 ```
 
+Run deobfuscators
+
+```shell
+dotnet run --project obfuscator-class-renaming\obfuscator-class-renaming.csproj artifacts\bin\hello-desktop\release\hello-desktop.dll artifacts\bin\hello-desktop\release\hello-desktop.obfuscated.dll
+dotnet run --project deobfuscator-class-renaming\deobfuscator-class-renaming.csproj artifacts\bin\hello-desktop\release\hello-desktop.obfuscated.dll artifacts\bin\hello-desktop\release\hello-desktop.deobfuscated.dll	
+```
+
 ## .NET Cheat Sheet
 
 If you see .NET for a first time, here is a cheat sheet for you:

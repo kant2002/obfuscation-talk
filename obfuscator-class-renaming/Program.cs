@@ -18,9 +18,13 @@ foreach (var type in module.Types)
         continue;
 
     // If the type is public or protected, skip it to avoid breaking external references
-    if (type.IsPublic || type.IsNestedFamily || type.IsNestedFamily || type.IsNestedAssembly)
-        continue;
-    
+    var renamePublicTypes = false;
+    if (renamePublicTypes)
+    {
+        if (type.IsPublic || type.IsNestedFamily || type.IsNestedFamily || type.IsNestedAssembly)
+            continue;
+    }
+
     // Rename types
     type.Name = "Class" + typeCode.ToString(CultureInfo.InvariantCulture);
     typeCode++;
