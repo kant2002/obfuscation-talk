@@ -80,10 +80,10 @@ void GenerateMethodBody(Expr expr, IList<Instruction> il)
     }
 }
 
-abstract record Expr;
-record ConstInt32(int Value) : Expr;
-record AddOperation(Expr Left, Expr Right) : Expr;
-record SubOperation(Expr Left, Expr Right) : Expr;
-record MulOperation(Expr Left, Expr Right) : Expr;
-record DivOperation(Expr Left, Expr Right) : Expr;
-record ModOperation(Expr Left, Expr Right) : Expr;
+record ConstInt32(int Value);
+record AddOperation(Expr Left, Expr Right);
+record SubOperation(Expr Left, Expr Right);
+record MulOperation(Expr Left, Expr Right);
+record DivOperation(Expr Left, Expr Right);
+record ModOperation(Expr Left, Expr Right);
+union Expr(ConstInt32, AddOperation, SubOperation, MulOperation, DivOperation, ModOperation);
